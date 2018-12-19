@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SteamBlockly Visual Programming Editor</title>
+	<script src="blockly_compressed.js"></script>
+	<script src="steam_html_blocks.js"></script>
+	<script src="python_compressed.js"></script>
+	<script src="msg/js/en.js"></script>
+
+	<script src="generators/html/basichtml.js"></script>
+	<script src="generators/html/formatting.js"></script>
+	<script src="generators/html/form.js"></script>
+	<script src="generators/html/frames.js"></script>
+	<script src="generators/html/images.js"></script>
+	<script src="generators/html/audiovideo.js"></script>
+	<script src="generators/html/links.js"></script>
+	<script src="generators/html/lists.js"></script>
+	<script src="generators/html/tables.js"></script>
+	<script src="generators/html/styles.js"></script>
+	<script src="generators/html/meta.js"></script>
+	<script src="generators/html/program.js"></script>
+	
+  	<link rel="stylesheet" type="text/css" href="style/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="style/font-awesome.css">
+  	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	
+	<div id = "table" class="container">
+	    <div class="row">
+	        <h1>SteamBlockly for Web Design</h1>
+	        <h2>Visual Programming Editor</h2>
+	    </div>
+	    <div class="row">
+		    <div class="col-sm-8">
+		    	<span class="heading" style="color: red;">Block Category </span>
+		    	<span class="heading" style="padding-left: 100px; color: purple;">Workspace</span>
+		        <div id="blocklyDiv" style="height: 516px; width: 100%; "></div>
+		    </div>
+		    <div class="col-sm-4">
+		    	<span class="heading" style="color: green;">Code Generated</span>
+		    	<span class="heading run-box" style="padding-left: 200px;"><a href="javascript:void()" onclick="runCode();" class="run"><i class="fa fa-play"></i> Run</a></span>
+		        <pre id="textarea" style="height: 517px; border: 1px solid #ccc; white-space: pre-wrap;font-family:segoe ui; font-size:0.9em; font-weight:350;padding:0.5em;"></pre>
+		        
+		    </div>
+		    <script type="text/javascript">
+		    	function runCode(){
+		    		//alert('ok');
+		    		var data = document.getElementById("textarea").textContent;
+		    		if (data==="") {
+		    			alert("Please, drag some blocks to the workspace")
+		    		}else{
+		    			/*var data = "<p>This is 'myWindow'</p>";
+						myWindow = window.open("data:text/html," + encodeURIComponent(data),
+						                       "_blank", "width=200,height=100");
+						myWindow.focus();*/
+
+						//var data = "<html><head><title>Title here</title></head><body><p>This is 'myWindow'</p></body></html>";
+						//alert(data);
+						myWindow=window.open('','','')
+						myWindow.document.write(data)
+						myWindow.focus()
+					}
+		    	}
+		    </script>
+	    </div>
+	</div>
+
+	<xml id="toolbox" style="display: none">
+	    <!--Beginning of additional scripts-->
+	    <category name="Basic HTML" colour="230">
+	        <block type="basic_doctype"></block>
+	        <block type="basic_html"></block>
+	        <block type="basic_head"></block>
+	        <block type="basic_body"></block>
+	        <block type="basic_title"></block>
+	        <block type="basic_heading1"></block>
+	        <block type="basic_heading2"></block>
+	        <block type="basic_heading3"></block>
+	        <block type="basic_heading4"></block>
+	        <block type="basic_heading5"></block>
+	        <block type="basic_heading6"></block>
+	        <block type="basic_paragraph"></block>
+	        <block type="basic_break"></block>
+	        <block type="basic_horizontal"></block>
+	    </category>   
+	    <sep></sep>
+	    <category name="Formatting" colour="210">
+	      <block type="format_text"></block>
+	      <block type="format_textt"></block>
+	      <block type="format_abbr"></block>
+	      <block type="format_address"></block>
+	      <block type="format_bold"></block>
+	      <block type="format_bdi"></block>
+	      <block type="format_big"></block>
+	      <block type="format_blockquote"></block>
+	      <block type="format_em"></block>
+	      <block type="format_strong"></block>
+	      <block type="format_italised"></block>
+	      <block type="format_mark"></block>
+	      <block type="format_underlined"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Forms and Input" colour="290">
+	      <block type="form_form"></block>
+	      <block type="form_input"></block>
+	      <block type="form_textarea"></block>
+	      <block type="form_button"></block>
+	      <block type="form_select"></block>
+	      <block type="form_option"></block>
+	      <block type="form_optgroup"></block>
+	      <block type="form_label"></block>
+	      <block type="form_fieldset"></block>
+	      <block type="form_legend"></block>
+	      <block type="form_datalist"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Frames" colour="20">
+	      <block type="frames_iframe"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Images" colour="260">
+	    	<block type ="images_image"></block>
+	    	<block type ="images_map"></block>
+	    	<block type ="images_area"></block>
+	    	<block type ="images_script"></block>
+	    	<block type ="images_canvas"></block>
+	    	<block type ="images_style"></block>
+	    	<block type ="images_figcaption"></block>
+	    	<block type ="images_figure"></block>
+	      	<block type ="images_svg"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Audio/Video" colour="330">
+	      <block type="audio_audio"></block>
+	      <block type="audio_source"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Links" colour="65">
+	      <block type="links_a"></block>
+	      <block type="links_link"></block>
+	      <block type="links_nav"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Lists" colour="45">
+	      <block type="lists_ul"></block>
+	      <block type="lists_li"></block>
+	      <block type="lists_ol"></block>
+	      <block type="lists_dl"></block>
+	      <block type="lists_dt"></block>
+	      <block type="lists_dd"></block>
+	      <block type="lists_label"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Tables" colour="120">
+	      <block type="tables_table"></block>
+	      <block type="tables_tr"></block>
+	      <block type="tables_td"></block>
+	      <block type="tables_hr"></block>
+	      <block type="tables_caption"></block>
+	      <block type="tables_head"></block>
+	      <block type="tables_foot"></block>
+	      <block type="tables_colgroup"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Styles and Semantics" colour="260">
+	      <block type="styles_style"></block>
+	      <block type="styles_div"></block>
+	      <block type="styles_span"></block>
+	      <block type="styles_footer"></block>
+	      <block type="styles_article"></block>
+	      <block type="styles_section"></block>
+	      <block type="styles_main"></block>
+	      <block type="styles_aside"></block>
+	      <block type="styles_details"></block>
+	      <block type="styles_summary"></block>
+	      <block type="styles_dialog"></block>
+	      <block type="styles_data"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Meta Info" colour="63">
+	      <block type="meta_meta"></block>
+	      <block type="meta_charset"></block>
+	    </category>
+	    <sep></sep>
+	    <category name="Programming" colour="20">
+	      <block type="program_noscript"></block>
+	      <block type="program_object"></block>
+	      <block type="program_embed"></block>
+	      <block type="program_param"></block>
+	    </category>
+	    <sep></sep>
+	</xml> 
+
+	<script>
+	    var workspace = Blockly.inject('blocklyDiv',
+	      {	toolbox: document.getElementById('toolbox'),
+	  		zoom:
+		        {controls: true,
+		          wheel: true,
+		          startScale: 1.0,
+		          maxScale: 3,
+		          minScale: 0.3,
+		          scaleSpeed: 1.2},
+		    trashcan: true,
+			scrollbars: true,
+			grid:
+		        {spacing: 20,
+		          length: 3,
+		          colour: '#ccc',
+		          snap: false}
+      	});
+
+	    function myUpdateFunction(event) {
+	      Blockly.Python.addReservedWords('code');
+		  var code = Blockly.Python.workspaceToCode(workspace);
+		  //remove whitespaces
+		  //code = code.replace(/<\s/g,'\<');
+		  code = code.replace(/\s\>/g,'>');
+		  
+		  document.getElementById("textarea").innerHTML = code;
+		}
+		workspace.addChangeListener(myUpdateFunction);
+
+	</script>
+</body>
+</html>

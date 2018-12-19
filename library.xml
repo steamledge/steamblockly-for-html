@@ -1,0 +1,52 @@
+<xml xmlns="http://www.w3.org/1999/xhtml"><block type="factory_base" id="A-vegP{;Cv1{CMC`vyqY" deletable="false" movable="false" x="0" y="0">
+    <mutation connections="BOTH"></mutation>
+    <field name="NAME">action</field>
+    <field name="INLINE">INT</field>
+    <field name="CONNECTIONS">BOTH</field>
+    <statement name="INPUTS">
+      <block type="input_value" id="q?twRif^DZh8$Q{)lag8">
+        <field name="INPUTNAME">NAME</field>
+        <field name="ALIGN">LEFT</field>
+        <statement name="FIELDS">
+          <block type="field_static" id="xS|%f{a#)486t=5J_,za">
+            <field name="TEXT">move</field>
+          </block>
+        </statement>
+        <value name="TYPE">
+          <shadow type="type_null" id="s:vBZKEr|*m@W38PaWe2"></shadow>
+        </value>
+        <next>
+          <block type="input_dummy" id="6!l02PH1)[*-Y33Z^;^h">
+            <field name="ALIGN">LEFT</field>
+            <statement name="FIELDS">
+              <block type="field_static" id="J.8Z-,_1jUNv#UaTBP=]">
+                <field name="TEXT">steps</field>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="TOOLTIP">
+      <block type="text" id="8]Woc^(5`(5#]Vjf5sG2" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="HELPURL">
+      <block type="text" id="UJZfbqvIl1/Rn2@M$KXm" deletable="false" movable="false">
+        <field name="TEXT"></field>
+      </block>
+    </value>
+    <value name="TOPTYPE">
+      <shadow type="type_null" id="?-5PY{by+pshi**`t(/T"></shadow>
+    </value>
+    <value name="BOTTOMTYPE">
+      <shadow type="type_null" id="-jU^PGgps_BPk)x^l^P0"></shadow>
+    </value>
+    <value name="COLOUR">
+      <block type="colour_hue" id="*nNswM)0DBk`$Bl#1il*">
+        <mutation colour="#5b67a5"></mutation>
+        <field name="HUE">230</field>
+      </block>
+    </value>
+  </block></xml>

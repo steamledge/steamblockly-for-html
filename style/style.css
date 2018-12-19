@@ -1,0 +1,62 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+body {
+  background: #1E90FF !important;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+h1 {
+  font-weight: normal;
+  font-size: 140%;
+  text-align: center;  
+  color: #1E90FF;
+  padding: 0px;
+}
+h2 {
+  font-weight: normal;
+  font-size: 100%;
+  text-align: center;  
+  color: #1E90FF;
+  padding: 0px;
+}
+#table {
+  height: 95%;
+  width: 95%;
+  background: #fff;
+  margin: auto;
+  margin-top: 15px;
+}
+#blocklyArea {
+  height: 99%;
+  background: #fc9;
+  text-align: center;
+}
+
+.blue-bg{
+	background: #fff;
+}
+
+.heading{
+  font-weight: bold;
+}
+
+.run{
+  color: white;
+  text-decoration-style: none;
+  background-color: #1E90FF;
+  padding: 5px 5px 5px 5px;
+  
+}
+
+.run:hover{
+  color: white;
+  text-decoration-style: none;
+  background-color: #1E90FF;
+  padding: 5px 5px 5px 5px;
+}
+
+.run-box{
+  padding-bottom: 10px;
+}
